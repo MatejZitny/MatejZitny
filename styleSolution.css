@@ -1,0 +1,265 @@
+{
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    background: lightgray;
+    border-radius: 0 0 100px 100px;
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto 20px;
+
+        ul {
+            display: inline-flex;
+            list-style: none;
+            padding-left: 0;
+
+            li {
+                margin: auto 5px;
+
+                a {
+                    text-decoration: none;
+                    color: black;
+
+                    &:hover {
+                        color: red;
+                    }
+                }
+            }
+        }
+
+        .right-nav {
+            li {
+                margin: auto 0;
+            }
+
+            li::after {
+                content: "/";
+                margin: 10px;
+            }
+
+            li:last-child {
+                &::after {
+                    content: "";
+                    margin: 0;
+                }
+            }
+        }
+
+        .left-nav span {
+            padding: 10px;
+            width: 75px;
+            display: inline-block;
+            text-align: center;
+            background: white;
+            border-radius: 40px;
+        }
+    }
+
+    .header-info {
+        height: 70vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+
+        .header-info-foto img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 100%;
+            border: 3px solid white;
+        }
+
+            img {
+                width: 10%;
+                aspect-ratio: 1/1;
+                object-fit: cover;
+                border-radius: 100%;
+                border: 3px solid white;
+            }
+        }
+
+        h1 {
+            width: 30%;
+            text-align: center;
+            font-size: 3rem;
+        }
+
+        .action-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            background: black;
+            padding: 20px 50px;
+            border-radius: 50px;
+
+            img {
+                margin-left: 10px;
+            }
+
+            &:hover {
+                box-shadow: 0 0 10px 1px black;
+            }
+        }
+    }
+
+.section-partners {
+    background: lightgray;
+
+    .container {
+        background: white;
+        height: 20vh;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        border-radius: 0 0 100px 100px;
+
+        img {
+            width: 10%;
+        }
+    }
+
+
+}
+
+.section-colab {
+    background: lightgray;
+    padding-bottom: 10vh;
+    padding-top: 10vh;
+
+    h1 {
+        padding: 3rem;
+        margin: 0;
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .colab-items {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
+
+footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 1024px) {
+    body {
+        font-size: 16px;
+        margin: 15px;
+    }
+    .container img {
+        display: none;
+    }
+    .container img:nth-child(-n+3) {
+        display: block;
+    }
+    header .header-info h1 {
+        font-size: 2rem;
+        width: 60%;
+    }
+
+    .container img {
+        width: 15%;
+    }
+
+    .section-colab h1 {
+        font-size: 2rem;
+        padding: 2rem;
+    }
+
+    .colab-items {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .colab-items article {
+        margin-bottom: 20px;
+    }
+
+    .section-partners .container img {
+        width: 15%;
+    }
+
+    .header-info-foto img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+        margin: 10px;
+    }
+    .header-info-foto img {
+        width: 150px;
+        height: 150px;
+    }
+
+    header nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .left-nav {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .right-nav {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .header-info h1 {
+        font-size: 1.5rem;
+        width: 80%;
+        text-align: center;
+    }
+
+    .container img {
+        width: 20%;
+    }
+
+    .section-partners .container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .section-partners .container img:nth-child(n+2) {
+        display: none;
+    }
+
+    .colab-items {
+        grid-template-columns: 1fr;
+    }
+}
+
